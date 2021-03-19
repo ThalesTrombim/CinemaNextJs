@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+// import Header from '../components/header';
+
 import Link from 'next/link';
 
 export default function Home({list}) {
@@ -10,7 +12,7 @@ export default function Home({list}) {
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      
       <main className={styles.main}>
         <h1 className={styles.title}>
           Filmes em Destaque

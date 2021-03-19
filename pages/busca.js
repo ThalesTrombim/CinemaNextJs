@@ -15,6 +15,12 @@ export default function Busca() {
     }
   }
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleSearch();
+    }
+  }
+  
     return (
     <div className={styles.container}>
       <Head>
@@ -27,7 +33,7 @@ export default function Busca() {
           Busca
         </h1>
 
-        <input type="text" value={search} onChange={e=>setSearch(e.target.value)}/>
+        <input type="text" value={search} onChange={e=>setSearch(e.target.value)} onKeyDown={handleKeyDown}/>
         <button onClick={handleSearch}>Buscar</button>
             <hr/>
 
